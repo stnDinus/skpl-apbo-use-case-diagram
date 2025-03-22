@@ -1,0 +1,34 @@
+@startuml
+left to right direction
+
+actor :Back-end API: as be
+actor :Front-end: as fe
+actor :Pengguna: as usr
+actor :IANA: as iana
+
+together {
+  "Situs web (phantomports.com)" as (website)
+  "Pelacakan port" as (search)
+  "Rekomendasi port" as (recommend)
+}
+
+"Himpunan ports IANA" as (ports)
+"Himpunan ports (Authorized cache)" as (cached)
+
+"Otorisasi" as (authorize)
+
+(website) -- usr
+fe -- (website)
+(website) .> (search): <<extend>>
+(search) .> (recommend): <<include>>
+
+be -- (ports)
+(ports) -- iana
+
+be -- (authorize)
+fe -- (authorize)
+
+be -- (cached)
+(authorize) .> (cached): <<extend>>
+
+@enduml
