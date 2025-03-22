@@ -4,7 +4,7 @@ left to right direction
 actor :Back-end API: as be
 actor :Front-end: as fe
 actor :Pengguna: as usr
-actor :IANA: as iana
+actor :IANA\n(Internet Assigned Numbers Association): as iana
 
 together {
   "Situs web (phantomports.com)" as (website)
