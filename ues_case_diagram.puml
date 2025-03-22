@@ -14,7 +14,7 @@ together {
 }
 
 "Himpunan ports IANA" as (ports)
-"Himpunan ports (Authorized cache)" as (cached)
+"Himpunan ports GraphQL (Authorized cache)" as (cached)
 
 "Otorisasi" as (authorize)
 
